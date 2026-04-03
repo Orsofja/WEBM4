@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans"
+}
+h1,h2,h3{
+    margin: 15px 0;
+    font-weight: 550;
+}
+p{
+    margin: 15px 0;
+}
+header{
+    color: #008AA6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vh;
+}
+li{
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #106D8C;
+    padding: 6px 16px;
+    margin-top: 9px;
+    border-radius: 15px;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav{
+    width: 50%;
+}
+.burger {
+    display: none;
+}
+.first{
+    background-color: #D8F8FF;
+    color: #106D8C;
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+}
+.introimg{
+    width: 350px;
+    margin: 1%;
+}
+.base{
+    height: 35vh;
+    color: #008AA6;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10%;
+    font-size: 28px;
+    text-align: center;
+}
+.task{
+    margin: 3% 2%;
+    padding: 2% 4%;
+    width: 70%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CAF6FF;
+    color: #008AA6;
+    border-radius: 25px;
+    font-size: 27px;
+}
+.taskimg{
+    width: 300px;
+}
+#task2{
+    margin-left: 20%;
+}
+.breakimg{
+    width: 100%;
+}
+.clients1{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: #008AA6;
+    padding: 30px 20px;
+    margin-bottom: 45px;
+}
+.clients2{
+    display: flex;
+    font-size: 25px;
+    color: #008AA6;
+    padding: 30px;
+}
+.part-clients{
+    flex: 1;
+    padding: 10px 30px;
+    border-left: 0.4mm solid black;
+}
+.clientsimg{
+    width: 30px;
+}
+#contacts{
+    background-color: #F9F9F9;
+}
+a:hover {
+    animation: anim1 0.5s forwards ease-out;
+
+}
+.taskimg:hover {
+    animation: anim2 0.5s forwards ease-out;
+}
+
+@keyframes anim1 {
+    0%{
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(1.1);
+        background-color: #008AA6;
+    }
+}
+@keyframes anim2 {
+    0%{
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 1025px){
+    .burger {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 22px;
+        width: 30px;
+        justify-content: space-around;
+        position: absolute;
+        z-index: 100;
+        transform: translateX(40vw);
+    }
+    .burger.active {
+        transform: translateX(5vw);
+        transition: 0.3s ease;
+    }
+    .burger span{
+        background-color: #003844;
+        height: 2px;
+        cursor: pointer;
+    }
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px);
+        transition: 0.3s;
+    }
+    .burger.active span:nth-child(2) {
+        display: none;
+    }
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px);;
+        transition: 0.3s;
+    }
+    nav ul {
+        flex-direction: column;
+        transform: scale(0);
+        position: absolute;
+        background: white;
+        width: 45vw;
+        display: flex;
+        align-items: end;
+        top: 0;
+        right: 0;
+        padding: 15px;
+        border: 1px #003844 solid;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    } 
+    nav ul.show{
+        transform: scale(1);
+        transition: 0.3s ease;
+    }
+    a {
+        font-size: 30px
+    }
+    .task {
+        height: 25vh;
+    }
+    .clients1{
+        margin-bottom: 15px;
+        flex-direction: column;
+    }
+    .clients2{
+        flex-direction: column;
+    }
+}
+@media (max-width: 770px){
+    h1 {
+        font-size: 30px
+    }
+    h2{
+        font-size: 25px
+    }
+    p {
+        font-size: 21px
+    }
+    a {
+        font-size: 23px
+    }
+    .introimg {
+        width: 180px
+    }
+    .task {
+        height: 25vh;
+    }
+    .taskimg {
+        width: 150px
+    }
+    #contacts {
+        height: 23vh;
+    }
+}
+
+@media (max-width: 548px) {
+    nav a{
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 20px
+    }
+    h2{
+        font-size: 18px
+    }
+    p {
+        font-size: 16px
+    }
+    a {
+        font-size: 18px
+    }
+    .introimg {
+        width: 140px
+    }
+    .base {
+        height: 50vh;
+    }
+    .task {
+        height: 30vh;
+    }
+    .taskimg {
+        width: 120px
+    }
+    .clients1{
+        margin-bottom: 15px;
+        flex-direction: column;
+    }
+    .clients2{
+        flex-direction: column;
+    }
+    #contacts {
+        height: 30vh;
+    }
+}

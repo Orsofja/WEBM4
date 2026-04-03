@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="form.css">
+    <title>TG form</title>
+    <link rel="icon" href="Images\image1.svg" type="image/x-icon">
+</head>
+<body>
+<div class="wrapper">
+    <!--Поле для информации пользователя-->
+    <h2 class="wrapper__title">Заполните форму для заказа и обратной связи!</h2>
+    <!--Добавьте action-->
+    <form class="form" action="https://echo.htmlacademy.ru/">
+        <div class="user">
+            <ul class="user-info">
+                <li class="user-info__item">
+                    <!--Вставь сюда label для ФИО-->
+                    <label for="name">Ф.И.О</label>
+                    <input type="text" name="name" id="name" placeholder="Введите ваше ФИО">
+                </li>
+                
+            </ul>
+            <!--Поля для адреса и даты-->
+            <ul class="address-date">
+                <li class="user-info__item">
+                    <!--Вставь сюда label для почты-->
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Введите ваш e-mail">
+                </li>
+            </ul>
+        </div>
+        <div class="delivery">
+            <ul class="delivery-info">
+                <h3 class="delivery__title">Выберете комплект</h3>
+                <li class="delivery-info__item">
+                    <!--Вставь сюда label для способа доставки-->
+                    <label for="courier">Мини</label>
+                    <input type="radio" name="mail" id="courier">
+                </li>
+                <li class="delivery-info__item">
+                    <!--Вставь сюда label для способа доставки-->
+                    <label for="sam">Стандарт+</label>
+                    <input type="radio" name="mail" id="sam">
+                </li>
+                <li class="delivery-info__item">
+                    <!--Вставь сюда label для способа доставки-->
+                    <label for="mail">VIP</label>
+                    <input type="radio" name="mail" id="mail">
+                </li>
+            </ul>
+            <ul class="delivery-info">
+                <h3 class="delivery__title">Выберете доп.услуги</h3>
+                <li class="delivery-info__item">
+                    <!--Вставь сюда label для доп услуг-->
+                    <label for="dop1">Доп. видеоурок</label>
+                    <input type="checkbox" name="dop1" id="dop1">
+                </li>
+                <li class="delivery-info__item">
+                    <!--Вставь сюда label для доп услуг-->
+                    <label for="dop2">Консультация с сотрудником</label>
+                    <input type="checkbox" name="dop2" id="dop2">
+                </li>
+                <li class="delivery-info__item">
+                    <!--Вставь сюда label для доп услуг-->
+                    <label for="dop3">Рекомендация специалистов</label>
+                    <input type="checkbox" name="dop3" id="dop3">
+                </li>
+            </ul>
+        </div>
+            <div class="select">
+                <h3 class="select__title">Оставьте свой комментарий и выберите оплату </h3>
+                <select name="" id="">
+                    <option>При оформлении заказа</option>
+                    <option>После получения видеоуроков</option>
+                </select>
+                <!--Вставь label для комментария-->
+                <label for="comment">Дополнительный комментарий</label>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Ваш комментарий"></textarea>
+            </div>
+        <!--Вставьте кнопку-->
+        <button type="submit">Готово!</button>
+        <a href="index.html">Вернуться на главную</a>
+    </form>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
